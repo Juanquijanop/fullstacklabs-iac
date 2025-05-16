@@ -37,7 +37,7 @@ jobs:
                  TF_INIT_ARGS=(
                  init
                  -backend-config="bucket=${{secrets.TF_STATE_BUCKET}}"
-                 -backend-config="key${{github.ref_name}}/terraform.tfstate"
+                 -backend-config="key=${{github.ref_name}}/terraform.tfstate"
                  -backend-config="region=us-east-1"
                  )
                  terraform "${TF_INIT_ARGS[@]}"
