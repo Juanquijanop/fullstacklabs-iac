@@ -91,10 +91,6 @@ resource "aws_cloudwatch_log_delivery" "cf_to_s3" {
   delivery_source_name     = aws_cloudwatch_log_delivery_source.cf_logs_source.name
   delivery_destination_arn = aws_cloudwatch_log_delivery_destination.cf_logs_dest.arn
 
-  s3_delivery_configuration = {
-    suffix_path = "/${var.environment}/{DistributionId}/{yyyy}/{MM}/{dd}/{HH}"
-  }
-
 }
 
 
