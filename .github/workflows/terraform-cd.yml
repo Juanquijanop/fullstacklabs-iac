@@ -40,7 +40,7 @@ jobs:
                  -backend-config="key${{github.ref_name}}/terraform.tfstate"
                  -backend-config="region=us-east-1"
                  )
-                 terrafom "${TF_INIT_ARGS[@]}"
+                 terraform "${TF_INIT_ARGS[@]}"
 
             - name: Terraform Apply
               run: |
