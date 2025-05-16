@@ -47,7 +47,7 @@ jobs:
                   TF_APPLY_ARGS=(
                   apply
                   -auto-approve
-                  -var-file=environments/${{github.ref_name}}/terraform.tfstate
+                  -var-file=environments/${{github.ref_name}}/terraform.tfvars
                   
                   )
                   terraform "${TF_APPLY_ARGS[@]}"
